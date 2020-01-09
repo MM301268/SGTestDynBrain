@@ -1,0 +1,7 @@
+TestCaseName,NodeURL,URLTestObject,Browser,CreateBorObject,UserId, Password, VoxWebCltStatus, Category, Location, Channel, Rescan, Sender, ContactCodeItemIdx
+P_VollmachtLTR_CR,http://172.17.118.19:4444/wd/hub,https://iis-srv.post-test.de/Webclient/,Chrome, true, IPD_Agent4, IPD_Agent4, Free, Vollmacht LTR, DP EPS, Mail, false, max.mustermann@musterfirma.de, 0
+P_Vorschusszahlung-an-WitwenWitwer_CR,http://172.17.118.19:4444/wd/hub,https://iis-srv.post-test.de/Webclient/,Chrome, true, IPD_Agent4, IPD_Agent4, Free, Vorschusszahlung an WitwenWitwer, BLN, Fax, true, IP Dynamics\nLyonel-Feininger Str. 28\n80807 München, 0
+P_Vorschusszahlung-an-WitwenWitwerLTR_CR,http://172.17.118.19:4444/wd/hub,https://iis-srv.post-test.de/Webclient/,Chrome, true, IPD_Agent4, IPD_Agent4, Free, Vorschusszahlung an WitwenWitwer LTR, DP EPS, Mail, false, max.mustermann@musterfirma.de, 0
+P_Wegfallaufträge-der-LTR_CR,http://172.17.118.19:4444/wd/hub,https://iis-srv.post-test.de/Webclient/,Chrome, true, IPD_Agent4, IPD_Agent4, Free, Wegfallaufträge der LTR, BLN, Fax, true, IP Dynamics\nLyonel-Feininger Str. 28\n80807 München, 0
+P_WICHTIG_CR,http://172.17.118.19:4444/wd/hub,https://iis-srv.post-test.de/Webclient/,Chrome, true, IPD_Agent4, IPD_Agent4, Free, WICHTIG, BLN, Fax, true, IP Dynamics\nLyonel-Feininger Str. 28\n80807 München, 0
+P_WICHTIG-LTR_CR,http://172.17.118.19:4444/wd/hub,https://iis-srv.post-test.de/Webclient/,Chrome, true, IPD_Agent4, IPD_Agent4, Free, WICHTIG LTR, DP EPS, Mail, false, max.mustermann@musterfirma.de, 0

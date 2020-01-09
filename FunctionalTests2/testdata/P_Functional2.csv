@@ -1,0 +1,7 @@
+TestCaseName,NodeURL,URLTestObject,Browser,CreateBorObject,UserId, Password, VoxWebCltStatus, Category, Location, Channel, Rescan, Sender, ContactCodeItemIdx
+P_Kontoänderug_CR,http://172.17.118.19:4444/wd/hub,https://iis-srv.post-test.de/Webclient/,Chrome, true, IPD_Agent2, IPD_Agent2, Free, Kontoänderung, BLN, Fax, true, IP Dynamics\nLyonel-Feininger Str. 28\n80807 München, 0
+P_KontoänderugLTR_CR,http://172.17.118.19:4444/wd/hub,https://iis-srv.post-test.de/Webclient/,Chrome, true, IPD_Agent2, IPD_Agent2, Free, Kontoänderung LTR, DP EPS, Mail, false, max.mustermann@musterfirma.de, 0
+P_Schriftwechsel-mit-Änderung_CR,http://172.17.118.19:4444/wd/hub,https://iis-srv.post-test.de/Webclient/,Chrome, true, IPD_Agent2, IPD_Agent2, Free, Schriftwechsel mit Änderung, DP EPS, Mail, false, max.mustermann@musterfirma.de, 0
+P_Schriftwechsel-mit-ÄnderungLTR_CR,http://172.17.118.19:4444/wd/hub,https://iis-srv.post-test.de/Webclient/,Chrome, true, IPD_Agent2, IPD_Agent2, Free, Schriftwechsel mit Änderung LTR, BLN, Fax, true, IP Dynamics\nLyonel-Feininger Str. 28\n80807 München, 0
+P_SchriftwechselOhneÄnderung_CR,http://172.17.118.19:4444/wd/hub,https://iis-srv.post-test.de/Webclient/,Chrome, true, IPD_Agent2, IPD_Agent2, Free, Schriftwechsel ohne Änderung, DP EPS, Mail, false, max.mustermann@musterfirma.de, 0
+P_SchriftwechselOhneÄnderungLTR_CR,http://172.17.118.19:4444/wd/hub,https://iis-srv.post-test.de/Webclient/,Chrome, true, IPD_Agent2, IPD_Agent2, Free, Schriftwechsel ohne Änderung LTR, BLN, Fax, true, IP Dynamics\nLyonel-Feininger Str. 28\n80807 München, 0

@@ -1,0 +1,5 @@
+TestCaseName,NodeURL,URLTestObject,Browser,CreateBorObject,UserId, Password, VoxWebCltStatus, Category, Location, Channel, Rescan, Sender, ContactCodeItemIdx
+P_Betreuung_NoContactCode_CR,http://172.17.118.19:4444/wd/hub,https://iis-srv.post-test.de/Webclient/,Chrome, true, IPD_Betreu, IPD_Betreu, Free, Betreuung, BLN, Fax, true, IP Dynamics\nLyonel-Feininger Str. 28\n80807 München, -1
+P_Betreuung_Bestandsführung_CR,http://172.17.118.19:4444/wd/hub,https://iis-srv.post-test.de/Webclient/,Chrome, true, IPD_Betreu, IPD_Betreu, Free, Betreuung, DP EPS, Mail, false, max.mustermann@musterfirma.de, 0
+P_Betreuung_Rentenanpassung_CR,http://172.17.118.19:4444/wd/hub,https://iis-srv.post-test.de/Webclient/,Chrome, true, IPD_Betreu, IPD_Betreu, Free, Betreuung, BLN, Fax, true, IP Dynamics\nLyonel-Feininger Str. 28\n80807 München, 1
+P_Betreuung_Jahressteuerbescheinigung_CR,http://172.17.118.19:4444/wd/hub,https://iis-srv.post-test.de/Webclient/,Chrome, true, IPD_Betreu, IPD_Betreu, Free, Betreuung, DP EPS, Mail, false, max.mustermann@musterfirma.de, 2

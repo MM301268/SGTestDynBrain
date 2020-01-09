@@ -1,0 +1,7 @@
+TestCaseName,NodeURL,URLTestObject,Browser,CreateBorObject,UserId, Password, VoxWebCltStatus, Category, Location, Channel, Rescan, Sender, ContactCodeItemIdx
+P_Umschläge-unzustellbar-usw_CR,http://172.17.118.19:4444/wd/hub,https://iis-srv.post-test.de/Webclient/,Chrome, true, IPD_Agent3, IPD_Agent3, Free, Umschläge - unzustellbar usw, DP EPS, Mail, false, max.mustermann@musterfirma.de, 0
+P_VerzugInlandAusland_CR,http://172.17.118.19:4444/wd/hub,https://iis-srv.post-test.de/Webclient/,Chrome, true, IPD_Agent3, IPD_Agent3, Free, Verzug Inland - Ausland, BLN, Fax, true, IP Dynamics\nLyonel-Feininger Str. 28\n80807 München, 0
+P_VerzugInlandAuslandLTR_CR,http://172.17.118.19:4444/wd/hub,https://iis-srv.post-test.de/Webclient/,Chrome, true, IPD_Agent3, IPD_Agent3, Free, Verzug Inland - Ausland LTR, BLN, Fax, true, IP Dynamics\nLyonel-Feininger Str. 28\n80807 München, 0
+P_VOAT10_CR,http://172.17.118.19:4444/wd/hub,https://iis-srv.post-test.de/Webclient/,Chrome, true, IPD_Agent3, IPD_Agent3, Free, VOAT 10, BLN, Fax, true, IP Dynamics\nLyonel-Feininger Str. 28\n80807 München, 0
+P_VOAT10LTR_CR,http://172.17.118.19:4444/wd/hub,https://iis-srv.post-test.de/Webclient/,Chrome, true, IPD_Agent3, IPD_Agent3, Free, VOAT 10 LTR, DP EPS, Mail, false, max.mustermann@musterfirma.de, 0
+P_Vollmacht_CR,http://172.17.118.19:4444/wd/hub,https://iis-srv.post-test.de/Webclient/,Chrome, true, IPD_Agent3, IPD_Agent3, Free, Vollmacht, BLN, Fax, true, IP Dynamics\nLyonel-Feininger Str. 28\n80807 München, 0
