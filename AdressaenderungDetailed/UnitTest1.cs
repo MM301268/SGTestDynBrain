@@ -20,7 +20,7 @@ namespace SeleniumWorker
         #endregion
 
         [ClassInitialize]
-        public static void InitTestClass()
+        public static void InitTestClass(TestContext testContext)
         {
             var programDirectory = AppDomain.CurrentDomain.BaseDirectory;
             programDirectory = Path.GetFullPath(Path.Combine(programDirectory, @"..\..\..\"));
