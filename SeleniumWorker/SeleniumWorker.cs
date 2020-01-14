@@ -35,7 +35,7 @@ namespace SeleniumWorker
         //private readonly ZZLoggerUtil _logutil = new ZZLoggerUtil();
         private readonly string _date = DateTime.Now.ToString("yyyMMdd-HHmm", DateTimeFormatInfo.InvariantInfo);
         private WebDriverWait _wait;
-        private IWebDriver _driver;
+        public  IWebDriver _driver;
         private Datatypes.WaitingMonitorStruct _recordWM;
         private List<Datatypes.WaitingMonitorStruct> _listWM;
         private static readonly CultureInfo CultureInfoGerman = new CultureInfo("de-DE", false);
@@ -55,7 +55,6 @@ namespace SeleniumWorker
             {
                 if (string.Compare(appender.Name, appenderName, new System.StringComparison()) == 0 && appender is log4net.Appender.FileAppender)
                 {
-
                     var fileAppender = (log4net.Appender.FileAppender)appender;
                     var directoryName = Path.GetDirectoryName(fileAppender.File);
                     fileAppender.File = System.IO.Path.Combine(directoryName + "//", newFilename + "_" + _date + ".log");
@@ -662,6 +661,34 @@ namespace SeleniumWorker
             catch (Exception ex)
             {
                 Logger.Debug(ex.ToString());
+            }
+        }
+        #endregion
+
+        #region GetScreenShot
+        public static string GetScreenShot(ref IWebDriver driver)
+        {
+            var programDirectory = AppDomain.CurrentDomain.BaseDirectory;
+            programDirectory = Path.GetFullPath(Path.Combine(programDirectory, @"..\..\..\"));
+            var screenShotDirectory = Path.Combine(programDirectory + "Screenshots");
+
+            if (File.Exists(screenShotDirectory) == false)
+            {
+                _ = Directory.CreateDirectory(screenShotDirectory);
+            }
+            
+            try
+            {
+                var screenshot = ((ITakesScreenshot)driver).GetScreenshot();
+                var date = DateTime.Now.ToString("yyyMMdd-HHmmssff", DateTimeFormatInfo.InvariantInfo);
+                var localpath = screenShotDirectory  + "\\" +  date + ".png";
+                screenshot.SaveAsFile(localpath, ScreenshotImageFormat.Png);
+                return localpath;
+            }
+            catch (Exception ex)
+            {
+                Logger.Debug(ex.ToString());
+                return null;
             }
         }
         #endregion

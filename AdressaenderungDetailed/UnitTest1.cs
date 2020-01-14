@@ -52,13 +52,14 @@ namespace SeleniumWorker
         [DeploymentItem("avformat-57.dll")]
         [DeploymentItem("avutil-55.dll")]
         [DeploymentItem("postproc-54.dll")]
+        [DeploymentItem("RazorEngine.dll")]
         [DeploymentItem("swresample-2.dll")]
         [DeploymentItem("swscale-4.dll")] 
         public void P_AdressaenderungDetailed()
         {
             
                                  
-            var test = Extent.CreateTest(TestContext.DataRow["TestCaseName"].ToString());
+            var test = Extent.CreateTest(TestContext.DataRow["TestCaseName"].ToString(), "This test is about testing usecase Adressänderung within DynamicBrain regression testing");
 
 
 
@@ -71,6 +72,7 @@ namespace SeleniumWorker
                 test.Log(Status.Pass, "Step2: Selenium instance could by serialized");
             }
             _mySelenium.ChangeLogFileName("RollingLogFileAppender", TestContext.DataRow["TestCaseName"].ToString());
+            // Check weather to send task to Rest
             if (TestContext.DataRow["CreateBorObject"].ToString() == "true")
             {
                 var result = SelWorker.SendRequestToRest(DateTime.Now,
@@ -79,13 +81,18 @@ namespace SeleniumWorker
                                                            TestContext.DataRow["Channel"].ToString(),
                                                            TestContext.DataRow["Rescan"].ToString(),
                                                            TestContext.DataRow["Sender"].ToString()).Result;
+
                 test.Log(Status.Pass, "Step3: Task (Bor-Object) has been created: " + TestContext.DataRow["Category"].ToString() + " ContactID: " + result.ToString());
                 Assert.IsTrue(result != null);
             }
             _mySelenium.Init(new Uri(TestContext.DataRow["NodeURL"].ToString()), new Uri(TestContext.DataRow["URLTestObject"].ToString()), TestContext.DataRow["Browser"].ToString());
-            test.Log(Status.Pass, "Step4: Selenium-Initialisation has been performed" );
+            test.Log(Status.Pass, "Step4: Selenium-Initialization has been performed" );
             var browserTitle = _mySelenium.GetBrowserTitle("Voxtron Web Client");
             Assert.IsTrue(browserTitle);
+
+            var ScreenShotImagePath1 = SelWorker.GetScreenShot(ref _mySelenium._driver);
+            test.Log(Status.Info, "Snapshot below: " + test.AddScreenCaptureFromPath(ScreenShotImagePath1, "CheckBrowserName"));
+
             test.Log(Status.Pass, "Step5: Browser Title: Voxtron Web Client: " + browserTitle);
             _mySelenium.Login(TestContext.DataRow["UserId"].ToString(), TestContext.DataRow["Password"].ToString(), TestContext.DataRow["VoxWebCltStatus"].ToString());
             test.Log(Status.Pass, "Step6: Login has been performed!");
@@ -93,13 +100,18 @@ namespace SeleniumWorker
             test.Log(Status.Info, "Password:      " + TestContext.DataRow["Password"].ToString());
             test.Log(Status.Info, "Client status: " + TestContext.DataRow["VoxWebCltStatus"].ToString());
 
+            test.Log(Status.Info, "Snapshot below: " + test.AddScreenCaptureFromPath(SelWorker.GetScreenShot(ref _mySelenium._driver), "CheckStatusAfterLogin"));
+
             _mySelenium.AcceptTask(1, int.Parse(TestContext.DataRow["ContactCodeItemIdx"].ToString()));
             test.Log(Status.Pass, "Step 7: Task has been accpeted");
             _mySelenium.Logout();
+            test.Log(Status.Info, "Snapshot below: " + test.AddScreenCaptureFromPath(SelWorker.GetScreenShot(ref _mySelenium._driver), "CheckStatusAfterLogout"));
             test.Log(Status.Pass, "Step 8: Logout has been performed");
             _mySelenium.Terminate();
             test.Log(Status.Pass, "Step 9: Selenium Terminated successful");
-            
+
+
+
             //Create video in another thread
             var InstanceCaller = new Thread(new ThreadStart(() => _mySelenium.CreateVideo()));
             InstanceCaller.Start();

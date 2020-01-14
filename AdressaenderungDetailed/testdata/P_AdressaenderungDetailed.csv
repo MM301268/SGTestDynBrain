@@ -1,5 +1,2 @@
 TestCaseName,NodeURL,URLTestObject,Browser,CreateBorObject,UserId, Password, VoxWebCltStatus, Category, Location, Channel, Rescan, Sender, ContactCodeItemIdx
 P_Adressänderung_NoContactCode_CR,http://172.17.118.19:4444/wd/hub,https://iis-srv.post-test.de/Webclient/,Chrome, true, IPD_AdrAnd, IPD_AdrAnd, Free, Adressänderung , BLN, Fax, true, IP Dynamics\nLyonel-Feininger Str. 28\n80807 München, -1
-P_Adressänderung_Bestandsführung_CR,http://172.17.118.19:4444/wd/hub,https://iis-srv.post-test.de/Webclient/,Chrome, true, IPD_AdrAnd, IPD_AdrAnd, Free, Adressänderung , DP EPS, Mail, false, max.mustermann@musterfirma.de, 0
-P_Adressänderung_Rentenanpassung_CR,http://172.17.118.19:4444/wd/hub,https://iis-srv.post-test.de/Webclient/,Chrome, true, IPD_AdrAnd, IPD_AdrAnd, Free, Adressänderung , BLN, Fax, true, IP Dynamics\nLyonel-Feininger Str. 28\n80807 München, 1
-P_Adressänderung_Jahressteuerbescheinigung_CR,http://172.17.118.19:4444/wd/hub,https://iis-srv.post-test.de/Webclient/,Chrome, true, IPD_AdrAnd, IPD_AdrAnd, Free, Adressänderung , DP EPS, Mail, false, max.mustermann@musterfirma.de, 2
